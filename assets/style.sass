@@ -1,0 +1,123 @@
+$blue: #0687f5
+$darkBlue: darken($blue, 25%)
+$grey: #333333
+$lightGrey: lighten($grey, 50%)
+$white: #ffffff
+$black: #212529
+
+body
+  font-family: 'Helvetica', sans-serif
+
+::selection
+  color: $white
+  background: $blue
+
+/**
+ * Navbar
+ */
+.site-logo
+  float: left
+  width: 150px
+  height: 70px
+
+.fa-bars, .fa-times
+  color: $white
+
+.button-mobile
+  cursor: pointer
+  display: none
+  background: none
+  border-radius: 0
+  border: none
+  padding: 0
+  width: 40px
+  height: 40px
+
+  i
+    float: right
+
+  &:focus
+    outline: none
+
+  .fa-times
+    display: block
+
+  .fa-bars
+    display: none
+
+  &.collapsed
+  
+    .fa-times
+      display: none
+
+    .fa-bars
+      display: block
+
+.navbar
+  background: $black
+  background-size: contain
+  padding: 1.5rem 15px 1rem 15px
+  border-bottom: 2px solid $black
+  align-items: baseline
+
+nav .navbar-nav li
+  margin-left: 16px
+
+  a
+    color: $white
+    margin-top: 0
+    margin-bottom: 0
+    padding-top: 0
+    padding-bottom: 0
+
+  a:hover
+    text-decoration: underline
+
+  span
+    display: none
+
+  &.active span
+    display: inline
+
+@media (max-width: 575.98px)
+
+  .navbar
+    align-items: center
+  
+  .site-logo
+    width: 75px
+    height: 35px
+
+  .button-mobile
+    display: block
+
+  nav ul.navbar-nav
+    margin-top: 10px
+
+  nav .navbar-nav li
+    margin-left: 0
+    margin-bottom: 10px
+    margin-top: 10px
+    text-align: center
+
+    &.active span
+      display: inline
+
+    &.active .nav-link,
+    .nav-link
+      color: $black
+      background-color: $white
+
+      &:hover, &:active
+        color: $white
+        background: $darkBlue
+
+    a
+      padding: 10px 0 10px 0
+
+      &:hover, &:active
+        text-decoration: none
+
+.container-fluid
+  padding-top: 30px
+  padding-bottom: 30px
