@@ -6,6 +6,20 @@ body {
   background: #0687f5; }
 
 /**
+ * Typography
+ */
+.code, .release-form {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/**
+ * Release
+ */
+.release-form {
+  background: #e6e6e6;
+  padding: 10px;
+  border: 5px solid #212529; }
+
+/**
  * Navbar
  */
 .site-logo {

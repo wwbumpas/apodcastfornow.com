@@ -1,7 +1,7 @@
 $blue: #0687f5
 $darkBlue: darken($blue, 25%)
 $grey: #333333
-$lightGrey: lighten($grey, 50%)
+$lightGrey: lighten($grey, 70%)
 $white: #ffffff
 $black: #212529
 
@@ -11,6 +11,23 @@ body
 ::selection
   color: $white
   background: $blue
+
+/**
+ * Typography
+ */
+
+.code
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
+/**
+ * Release
+ */
+
+.release-form
+  @extend .code
+  background: $lightGrey
+  padding: 10px
+  border: 5px solid $black
 
 /**
  * Navbar
