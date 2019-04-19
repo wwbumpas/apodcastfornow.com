@@ -13,6 +13,7 @@
         <ul class="navbar-nav mr-auto">
           {%- assign sorted_pages = site.pages | sort: "order" -%}
           {%- for node in sorted_pages -%}
+          {%- unless node.exclude -%}
           {%- if node.title -%}
           <li class="{% if node.url == page.url %}active{% endif %}">
             <a class="nav-link" href="{{ node.url | relative_url }}">
@@ -21,8 +22,8 @@
             </a>
           </li>
           {%- endif -%}
+          {%- endunless -%}
           {%- endfor -%}
-          <li><a class="nav-link" href="{{ "/feed.xml" | relative_url }}">Feed</a></li>
         </ul>
       </div>
 

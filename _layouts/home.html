@@ -1,13 +1,132 @@
----
-layout: default
----
-<div class="row">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-   <div class="col">
-    
-    <h1>Coordinated Universal Time</h1>
-    <em>A Podcast For Now</em>
+{%- include head.html -%}
 
+<body>
+
+
+
+  {%- include header.html -%}
+
+
+
+  <main class="container-fluid-home">
+
+
+
+    <div class="row row-hero align-items-center" id="grained">
+      <div class="col col-center-text">
+        <h1>Coordinated Universal Time</h1>
+        <br>
+        <button class="btn btn-primary">Become a Patron</button>
+      </div>
+    </div>
+
+
+
+    <div class="row row-light">
+      <div class="col">
+        <div class="row">
+            <div class="col">
+              <p>Listen Now</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="#"><i class="fab fa-soundcloud"></i><br>SoundCloud</a>
+            </div>
+            <div class="col">
+              <a href="#"><i class="fab fa-itunes"></i><br>iTunes</a>
+            </div>
+            <div class="col">
+              <a href="#"><i class="fab fa-google-play"></i><br>Play</a>
+            </div>
+            <div class="col">
+              <a href="#"><i class="fab fa-spotify"></i><br>Spotify</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="#">See all platforms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  <div class="row row-dark">
+    <div class="col">
+      <h2 class="tagline"></h2>
+    </div>
   </div>
 
-</div>
+
+
+  <div class="row row-dark">
+    <div class="col-sm-12 col-md-6 order-md-2">
+      <img src="#" width="200" height="200" />
+    </div>
+    <div class="col-sm-12 col-md-3 offset-md-3 order-md-1">
+      <p>UTC is a podcast for now. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit.</p>
+    </div>
+  </div>
+
+  <div class="row row-dark">
+    <div class="col col-center-text">
+      <em>Latest the blog...</em>
+      {% for post in site.posts limit:1 %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="row row-light">
+    <div class="col">
+      <h2>We're a non-profit that gives to other non-profits. Meta.</h2>
+    </div>
+  </div>
+
+
+  <div class="row row-dark">
+    <div class="col-sm-12 col-md-6 order-md-1">
+      <img src="#" width="200" height="200" />
+    </div>
+    <div class="col-sm-12 col-md-3 order-md-2">
+      <p>Patron revenue - operating costs = monthly donation to a rotating community-picked NPO</p>
+    </div>
+  </div>
+
+
+
+  <div class="row row-light">
+    <div class="col">
+      <h2>$0 donated so far.</h2>
+    </div>
+  </div>
+
+
+
+  <div class="row row-dark">
+    <div class="col-sm-12 col-md-6 order-md-2">
+      <img src="#" width="200" height="200" />
+    </div>
+    <div class="col-sm-12 col-md-3 offset-md-3 order-md-1">
+      <p><strong>Radically transparent finances.</strong> Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit.</p>
+    </div>
+  </div>
+
+
+
+{%- include footer.html -%}
+
+
+
+  </main>
+</body>
+
+{%- include javascript.html -%}
+
+</html>

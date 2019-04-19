@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Release
+title: UTC Guest Release Form
 permalink: /release/
+exclude: true
 ---
 
 <div class="release-form">
 <br>
-UTC Podcast Release Form<br>
+UTC Guest Release Form<br>
 ------------------------<br>
 v1.0, 2019-04-18<br>
 <br>

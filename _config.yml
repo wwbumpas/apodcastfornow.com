@@ -16,5 +16,6 @@ feed:
   path: feed.xml
 collections_dir: collections
 collections:
+  - episodes
 jekyll_compose:
     auto_open: true
