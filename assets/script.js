@@ -69,26 +69,28 @@ class TextScramble {
 const phrases = [
   'Now',
   '2019',
-  'Lunar Punks',
+  'Lunarpunks',
   'Hauntologists',
   'Now',
   'Artists',
-  'Artificial Intelligences',
+  '浮世',
+  'AI',
   'Sonderers',
   'Climates',
-  '3019',
+  '03019',
   'Internet Citizens',
   'Solastalgia',
   'Now',
-  'The Anthropocene',
+  'Anthropocenes',
   'Makers',
   'You',
-  'Solar Punks',
-  'Academics',
+  'Solarpunks',
+  '⁂',
   'Now',  
   'The Hopeful',
   'Ellipsism',
   'Exulansis',
+  '&#19932;'
 ]
 
 if ($('.tagline').length) {
@@ -118,4 +120,27 @@ if ($('#grained')) {
   }
   grained("#grained", options);
 }
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 100 ){
+    $('.navbar').addClass('navBackgroundVisible');
+  } else {
+    $('.navbar').removeClass('navBackgroundVisible');
+  };    
+});
+
+$('.button-mobile').on('click', function() {
+  if ($('.navbar-collapse').hasClass('show')) {
+    $('.navbar').removeClass('navToggleBackgroundVisible');
+  } else {
+    $('.navbar').addClass('navToggleBackgroundVisible');
+  }
+});
+
+$('.listen-now').click(function() {
+  $('html, body').animate({
+    scrollTop: ($('.row-platforms').offset().top - 80)
+  },500);
+});
+
 });

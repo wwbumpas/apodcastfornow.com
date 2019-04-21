@@ -1,14 +1,23 @@
 <header class="site-header">
 
-  <div class="wrapper">
-    <nav class="navbar navbar-expand-sm">
 
-      <a href="{{ "/" | relative_url }}" alt="Coordinated Universal Time"><img class="site-logo" src="{{ "/assets/images/utc.svg" }}" /></a>
+
+  <div class="wrapper">
+
+
+
+    <nav class="navbar fixed-top navbar-expand-sm">
+  
+      <a class="navbar-brand" href="/">
+        <span class="navbar-brand-full">COORDINATED UNIVERSAL TIME</span>
+        <span class="navbar-brand-small">UTC</span>
+      </a>
 
       <button class="button-mobile collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars fa-lg"></i>
         <i class="fas fa-times fa-lg"></i>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           {%- assign sorted_pages = site.pages | sort: "order" -%}
@@ -29,6 +38,10 @@
 
     </nav>
 
+
+
   </div>
+
+
 
 </header>

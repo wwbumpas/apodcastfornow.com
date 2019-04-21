@@ -1,23 +1,39 @@
 /**
  * Variables
  */
-$blue: #20738d
-$lightBlue: #2fe6de
-$gold: #f5cb5c
+$blue: #06AED5
+$yellow: #FDFE00
+$black: #071013 // 7, 16, 19
+$grey: #222E50
+$yellowSecondary: #FCBA04
 $red: #9e0031
 $white: #ffffff
-$black: #161032
-$grey: desaturate(lighten($black, 80%), 100%)
+
 $baseUnit: 30px
 
 
 body
-  font-family: 'Helvetica', sans-serif
+  @extend .normal-typography
   color: $black
 
 ::selection
-  color: $white
-  background: $blue
+  color: $yellow
+  background: $red
+
+.btn-primary
+  background-color: $blue
+  border-color: $blue
+
+  &:hover
+    background-color: $grey
+    border-color: $yellow
+    color: $yellow
+
+a
+  color: $blue
+
+a:hover
+  color: $grey
 
 /**
  * Rows
@@ -28,6 +44,7 @@ body
   background-repeat: no-repeat
   background-size: cover
   padding-bottom: $baseUnit
+  border-bottom: 4px solid $blue
 
 @media (min-width: 576px)
   .row-hero
@@ -41,11 +58,14 @@ body
 
 .row-light
   background: $white
-  color: $black
+  color: $grey
 
 .row-dark
-  background: $black
-  color: $white
+  background: $grey
+  color: $yellow
+
+  a:hover
+    color: $yellow
 
 .row-footer
   background: $black
@@ -54,7 +74,6 @@ body
   padding-bottom: $baseUnit
 
 .row-dark, .row-light
-  text-align: center
   padding-top: 10px
   padding-bottom: 10px
   border: 0
@@ -67,6 +86,24 @@ body
 .row-page-title
     margin-bottom: $baseUnit
 
+.row-platforms
+  text-align: center
+
+
+  i
+    font-size: 48px
+
+@media (max-width: 576px)
+  .row-platforms i
+    font-size: 24px
+
+.row-footer
+  i
+    font-size: 24px
+
+  a:hover
+    color: $yellow
+
 /**
  * Cols
  */
@@ -77,6 +114,13 @@ body
 .col-collection-title
   h2
     display: inline
+
+.col-img-auto img
+  width:  100% /*or 70%, or what you want*/
+  height: 100% /*or 70%, or what you want*/
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
 
 /**
  * Layout
@@ -98,25 +142,38 @@ body
 .code
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 
-.container-fluid-home
-  .fab, .fas
-    font-size: 24px
+.abstract-typography
+  font-family: 'Roboto', sans-serif
 
-  &:hover
-    color: $red
+.normal-typography
+  @extend .abstract-typography
+  font-weight: 400
 
-.tagline
-  @extend .code
-  font-weight: 100
-  font-size: 16px
-  color: #FAFAFA
+.light-typography
+  @extend .abstract-typography
+  font-weight: 300
 
-  .dud
-    color #757575
+.hero
+  background-color: rgba(7, 16, 19, .8)
+  padding-top: 10px
+  padding-bottom: 10px
 
-@media (min-width: 576px)
-  .tagline  
-    font-size: 24px
+  h1
+    @extend .light-typography
+
+  .tagline
+    @extend .code
+    font-weight: 100
+    font-size: 16px
+    color: $white
+
+    .dud
+      color: darken($white, 25%)
+
+  @media (min-width: 576px)
+    .tagline  
+      font-size: 24px
+
 
 /**
  * Release
@@ -131,11 +188,6 @@ body
 /**
  * Navbar
  */
-
-.site-logo
-  float: left
-  width: 150px
-  height: 70px
 
 .fa-bars, .fa-times
   color: $white
@@ -171,11 +223,36 @@ body
       display: block
 
 .navbar
-  background: $black
-  background-size: contain
+  @extend .light-typography
+  background-color: rgba(7, 16, 19, 0)
   padding: 1.5rem 15px 1rem 15px
-  border-bottom: 2px solid $black
   align-items: baseline
+  -webkit-transition: background-color .5s
+  -moz-transition: background-color .5s
+  transition: background-color .5s
+
+.navBackgroundVisible,
+.navToggleBackgroundVisible
+  background-color: rgba(7, 16, 19, 1)
+
+.navbar-brand
+  color: $yellow
+
+  &:hover
+    color: $white
+    text-decoration: underline
+
+  .navbar-brand-full
+    display: none
+
+@media (min-width: 575.98px)
+  .navbar-brand
+    
+    .navbar-brand-full
+      display: inline
+
+    .navbar-brand-small
+      display: none
 
 nav .navbar-nav li
   margin-left: 16px
@@ -200,10 +277,6 @@ nav .navbar-nav li
 
   .navbar
     align-items: center
-  
-  .site-logo
-    width: 75px
-    height: 35px
 
   .button-mobile
     display: block
