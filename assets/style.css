@@ -109,10 +109,11 @@ a:hover {
   background-repeat: no-repeat; }
 
 .col-sotce p {
-  color: #E83E8C;
-  font-size: 12px;
   width: 100%;
   text-align: center; }
+.col-sotce a {
+  color: #E83E8C;
+  font-size: 12px; }
 
 /**
  * Layout
@@ -129,7 +130,7 @@ a:hover {
 /**
  * Typography & Brand
  */
-.code, .col-sotce p, pre,
+.code, .col-sotce a, pre,
 blockquote p, .hero .tagline, .release-form {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
