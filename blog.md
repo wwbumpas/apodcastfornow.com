@@ -10,7 +10,7 @@ exclude: false
   <div class="col col-collection-title">
     <header>
       <h2 itemprop="name headline">{{ post.title }}</h2> <a href="{{ post.url | relative_url }}">Link</a>
-      <pre>{{ post.date }}</pre>
+      <pre>{{ post.date }} by {{ post.author }}</pre>
       <hr>
     </header>
   </div>

@@ -15,15 +15,16 @@
 
 
 
-    <div class="row row-hero align-items-center" id="grained">
-      <div class="col col-center-text">
-        <img src="assets/images/temp.png" />
+    <div class="row row-hero" id="grained">
+      <div class="col flex-column d-flex align-items-center ">
+        <div class="logo">
+          <img src="assets/images/temp.png" />
+        </div>
         <div class="hero">
           <h1>COORDINATED UNIVERSAL TIME</h1>
           <h2 class="tagline">A Podcast For Now</h2>
+          <button class="btn btn-primary btn-lg listen-now">Listen Now</button>
         </div>
-        <br>
-        <a href="#" class="btn btn-primary btn-lg listen-now">Listen Now</a>
       </div>
     </div>
 
@@ -31,45 +32,44 @@
 
   <div class="row row-light">
     <div class="col-sm-12 col-md-3 order-md-2 col-img-auto">
-      <img src="assets/images/15-115.jpg" />
+      <img src="assets/images/collage.svg" />
     </div>
     <div class="col-sm-12 col-md-3 offset-md-3 order-md-1">
-      <h2>UTC is a podcast for now.</h2>
-      <p>Think of us as your aural solarpunk zine that reconciles journalism, DJ mixes, a talk show, field recordings, and sonic collages.</p>
-      <p>We also mix in stuff made by artificial intelligence.</p>
+      <h3>UTC is a podcast for now.</h3>
+      <p>Think of us as your <strong>aural solarpunk zine</strong> that merges:</p>
+      <ul>
+        <li>Interviews</li>
+        <li>DJ mixes</li>
+        <li>Hyperstition</li>
+        <li>Talk shows</li>
+        <li>Field recordings</li>
+        <li>Artificial intelligence</li>
+        <li>Sonic collages</li>
+      </ul>
     </div>
   </div>
 
 
 
   <div class="row row-dark row-platforms">
-    <div class="col">
-      <div class="row">
-        <div class="col">
-          <a href="#"><i class="fab fa-soundcloud"></i><br>SoundCloud</a>
-        </div>
-        <div class="col">
-          <a href="#"><i class="fab fa-itunes"></i><br>iTunes</a>
-        </div>
-        <div class="col">
-          <a href="#"><i class="fab fa-google-play"></i><br>Play</a>
-        </div>
-        <div class="col">
-          <a href="#"><i class="fab fa-spotify"></i><br>Spotify</a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a href="#">More...</a>
-        </div>
-      </div>
+    <div class="col-sm-12 col-md-2 offset-md-2">
+      <a href="#"><i class="fab fa-soundcloud"></i><br>SoundCloud</a>
+    </div>
+    <div class="col-sm-12 col-md-2">
+      <a href="#"><i class="fab fa-itunes"></i><br>iTunes</a>
+    </div>
+    <div class="col-sm-12 col-md-2">
+      <a href="#"><i class="fab fa-google-play"></i><br>Play</a>
+    </div>
+    <div class="col-sm-12 col-md-2">
+      <a href="#"><i class="fab fa-spotify"></i><br>Spotify</a>
     </div>
   </div>
 
 
 
-  <div class="row row-light">
-    <div class="col col-center-text">
+  <div class="row row-mid">
+    <div class="col col-center-elements">
       <h2>We're also a non-profit that gives to other non-profits.</h2>
     </div>
   </div>
@@ -78,35 +78,33 @@
 
   <div class="row row-dark">
     <div class="col-sm-12 col-md-3 offset-md-3 order-md-1 col-img-auto">
-      <img src="assets/images/15-115.jpg" />
+      <img src="assets/images/patreon.svg" />
     </div>
     <div class="col-sm-12 col-md-3 order-md-2">
-      <p><strong>Want to give, but can't decide where?</strong></p>
-      <p>Each month we take our Patron's support, pay for the lights, then donate the rest to rotating community-picked non-profit org.</p>
+      <h3>Spread the post-scarcity.</h3>
+      <p>Want to give, but can't decide where? Each month we take our Patron's support, pay for the lights, then donate the rest to rotating community-picked non-profit org.</p>
       <a href="#" class="btn btn-primary btn-block">Become a Patron</a>
+      <!-- h2>$0 donated so far.</h2>
+      <p>You trust us with your donations.<br><a href="https://docs.google.com/spreadsheets/d/1ZVXdSCJKKQop3Nhjjw6FjP_c3nysywN9ek55xI7vqlc/edit#gid=0">Here's where it all goes.</a></p -->
     </div>
   </div>
 
 
+  
   <div class="row row-light">
-    <div class="col col-center-text">
-      <h2>$0 donated so far.</h2>
-      You trust us with your donations. <a href="https://docs.google.com/spreadsheets/d/1ZVXdSCJKKQop3Nhjjw6FjP_c3nysywN9ek55xI7vqlc/edit#gid=0">Here's where it all goes.</a>
-    </div>
-  </div>
-
-
-
-  <div class="row row-dark">
-    <div class="col col-center-text">
-      <em>Latest the blog...</em>
-      {% for post in site.posts limit:1 %}
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt }}</p>
+    <div class="col-md-2"></div>
+      {% for post in site.posts limit:3 %}
+      <div class="col-sm-12 col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url | relative_url }}">Read more...</a>
+          </div>
+        </div>
+      </div>
       {% endfor %}
-    </div>
   </div>
-
 
 
 

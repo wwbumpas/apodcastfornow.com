@@ -121,12 +121,18 @@ if ($('#grained')) {
   grained("#grained", options);
 }
 
+if ($('.container-fluid-default').length) {
+  $('.navbar').addClass('navBackgroundVisible');
+}
+
 $(window).scroll(function() {
-  if ($(window).scrollTop() > 100 ){
-    $('.navbar').addClass('navBackgroundVisible');
-  } else {
-    $('.navbar').removeClass('navBackgroundVisible');
-  };    
+  if ($('.container-fluid-home').length) {
+    if ($(window).scrollTop() > 100 ) {
+      $('.navbar').addClass('navBackgroundVisible');
+    } else {
+      $('.navbar').removeClass('navBackgroundVisible');
+    }
+  }
 });
 
 $('.button-mobile').on('click', function() {

@@ -2,25 +2,26 @@
  * Variables
  */
 body {
-  color: #071013; }
+  color: #c7e2eb;
+  background: #071013; }
 
 ::selection {
   color: #FDFE00;
-  background: #9e0031; }
+  background: #E83E8C; }
 
 .btn-primary {
   background-color: #06AED5;
   border-color: #06AED5; }
   .btn-primary:hover {
     background-color: #222E50;
-    border-color: #FDFE00;
+    border-color: #222E50;
     color: #FDFE00; }
 
 a {
   color: #06AED5; }
 
 a:hover {
-  color: #222E50; }
+  color: #FDFE00; }
 
 /**
  * Rows
@@ -29,44 +30,53 @@ a:hover {
   background-image: url("images/15-115.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 30px;
-  border-bottom: 4px solid #06AED5; }
+  padding-bottom: 50px;
+  border-bottom: 4px solid #E83E8C; }
 
 @media (min-width: 576px) {
   .row-hero {
     height: 500px; } }
 .row-hero h1, .row-hero em, .row-hero button {
-  color: #ffffff;
   display: block;
   margin: auto; }
+.row-hero h1 {
+  color: #FFFFFF; }
+.row-hero em, .row-hero button {
+  color: #c7e2eb; }
 
 .row-light {
-  background: #ffffff;
+  background: #c7e2eb;
+  color: #222E50; }
+  .row-light h3 {
+    color: #E83E8C; }
+
+.row-mid {
+  background: #c7e2eb;
   color: #222E50; }
 
-.row-dark {
-  background: #222E50;
-  color: #FDFE00; }
-  .row-dark a:hover {
-    color: #FDFE00; }
+.row-dark, .card {
+  background: #071013;
+  color: #c7e2eb; }
+  .row-dark h3, .card h3 {
+    color: #E83E8C; }
 
 .row-footer {
   background: #071013;
-  color: #ffffff;
+  color: #c7e2eb;
   text-align: left;
-  padding-bottom: 30px; }
+  padding-bottom: 50px; }
 
-.row-dark, .row-light {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.row-light, .row-mid, .row-dark, .card {
+  padding-top: 25px;
+  padding-bottom: 25px;
   border: 0; }
 
 @media (min-width: 576px) {
-  .row-dark, .row-light, .row-tagline, .row-footer {
-    padding-top: 30px;
-    padding-bottom: 30px; } }
+  .row-light, .row-mid, .row-dark, .card, .row-tagline, .row-footer {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
 .row-page-title {
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
 
 .row-platforms {
   text-align: center; }
@@ -74,18 +84,19 @@ a:hover {
     font-size: 48px; }
 
 @media (max-width: 576px) {
-  .row-platforms i {
+  .col-sm-12 {
+    margin-bottom: 25px; }
+
+  i {
     font-size: 24px; } }
 .row-footer i {
   font-size: 24px; }
-.row-footer a:hover {
-  color: #FDFE00; }
 
 /**
  * Cols
  */
-.col-center-text {
-  text-align: center; }
+.col-center-elements h1, .col-center-elements h2, .col-center-elements h3, .col-center-elements h4, .col-center-elements h5, .col-center-elements h6, .col-center-elements p, .col-center-elements a, .col-center-elements img {
+  text-align: center !important; }
 
 .col-collection-title h2 {
   display: inline; }
@@ -97,6 +108,12 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat; }
 
+.col-sotce p {
+  color: #E83E8C;
+  font-size: 12px;
+  width: 100%;
+  text-align: center; }
+
 /**
  * Layout
  */
@@ -104,36 +121,53 @@ a:hover {
   padding-left: 15px;
   padding-right: 15px; }
 
-.container-fluid {
+.container-fluid-default {
+  padding-top: 100px;
   padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 30px; }
+  padding-right: 15px; }
 
 /**
- * Typography
+ * Typography & Brand
  */
-.code, .hero .tagline, .release-form {
+.code, .col-sotce p, pre,
+blockquote p, .hero .tagline, .release-form {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
-.abstract-typography, .normal-typography, body, .light-typography, .hero h1, .navbar {
+.abstract-typography, .normal-typography, body, .light-typography, h1, h2, h3, h4, h5, .navbar {
   font-family: "Roboto", sans-serif; }
 
 .normal-typography, body {
   font-weight: 400; }
 
-.light-typography, .hero h1, .navbar {
+.light-typography, h1, h2, h3, h4, h5, .navbar {
   font-weight: 300; }
+
+h1, h2, h3, h4, h5 {
+  text-align: center; }
+
+pre,
+blockquote p {
+  color: #E83E8C; }
+
+@media (min-width: 576px) {
+  h1, h2, h3, h4, h5 {
+    text-align: left; } }
+.logo {
+  padding-top: 50px;
+  padding-bottom: 25px; }
 
 .hero {
   background-color: rgba(7, 16, 19, 0.8);
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding: 10px;
+  width: 80%; }
+  .hero h1, .hero h2, .hero a {
+    text-align: center !important; }
   .hero .tagline {
     font-weight: 100;
     font-size: 16px;
-    color: #ffffff; }
+    color: #c7e2eb; }
     .hero .tagline .dud {
-      color: #bfbfbf; }
+      color: #6ab1c8; }
   @media (min-width: 576px) {
     .hero .tagline {
       font-size: 24px; } }
@@ -150,7 +184,7 @@ a:hover {
  * Navbar
  */
 .fa-bars, .fa-times {
-  color: #ffffff; }
+  color: #c7e2eb; }
 
 .button-mobile {
   cursor: pointer;
@@ -162,7 +196,8 @@ a:hover {
   width: 40px;
   height: 40px; }
   .button-mobile i {
-    float: right; }
+    float: right;
+    color: #FDFE00; }
   .button-mobile:focus {
     outline: none; }
   .button-mobile .fa-times {
@@ -189,7 +224,7 @@ a:hover {
 .navbar-brand {
   color: #FDFE00; }
   .navbar-brand:hover {
-    color: #ffffff;
+    color: #c7e2eb;
     text-decoration: underline; }
   .navbar-brand .navbar-brand-full {
     display: none; }
@@ -202,7 +237,7 @@ a:hover {
 nav .navbar-nav li {
   margin-left: 16px; }
   nav .navbar-nav li a {
-    color: #ffffff;
+    color: #c7e2eb;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
@@ -233,13 +268,13 @@ nav .navbar-nav li {
       display: inline; }
     nav .navbar-nav li.active .nav-link,
     nav .navbar-nav li .nav-link {
-      color: #071013;
-      background-color: #ffffff; }
+      color: #c7e2eb;
+      background-color: #06AED5; }
       nav .navbar-nav li.active .nav-link:hover, nav .navbar-nav li.active .nav-link:active,
       nav .navbar-nav li .nav-link:hover,
       nav .navbar-nav li .nav-link:active {
-        color: #ffffff;
-        background: #06AED5; }
+        background-color: #222E50;
+        color: #FDFE00; }
     nav .navbar-nav li a {
       padding: 10px 0 10px 0; }
       nav .navbar-nav li a:hover, nav .navbar-nav li a:active {
@@ -248,7 +283,7 @@ nav .navbar-nav li {
  * Footer
  */
 footer .col-sm-12 {
-  margin: 30px 0 0 0; }
+  margin: 50px 0 0 0; }
   footer .col-sm-12 ul {
     list-style: none;
     margin: 0;

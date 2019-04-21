@@ -3,18 +3,19 @@
  */
 $blue: #06AED5
 $yellow: #FDFE00
-$black: #071013 // 7, 16, 19
-$grey: #222E50
+$dark: #071013 // 7, 16, 19
+$mid: #222E50
 $yellowSecondary: #FCBA04
-$red: #9e0031
-$white: #ffffff
+$red: #E83E8C
+$light: lighten($dark, 80%)
 
-$baseUnit: 30px
+$baseUnit: 50px
 
 
 body
   @extend .normal-typography
-  color: $black
+  color: $light
+  background: $dark
 
 ::selection
   color: $yellow
@@ -25,15 +26,15 @@ body
   border-color: $blue
 
   &:hover
-    background-color: $grey
-    border-color: $yellow
+    background-color: $mid
+    border-color: $mid
     color: $yellow
 
 a
   color: $blue
 
 a:hover
-  color: $grey
+  color: $yellow
 
 /**
  * Rows
@@ -44,7 +45,7 @@ a:hover
   background-repeat: no-repeat
   background-size: cover
   padding-bottom: $baseUnit
-  border-bottom: 4px solid $blue
+  border-bottom: 4px solid $red
 
 @media (min-width: 576px)
   .row-hero
@@ -52,34 +53,46 @@ a:hover
 
 .row-hero
   h1, em, button
-    color: $white
     display: block
     margin: auto
 
+  h1
+    color: #FFFFFF
+
+  em, button
+    color: $light  
+
 .row-light
-  background: $white
-  color: $grey
+  background: $light
+  color: $mid
+
+  h3
+    color: $red
+
+.row-mid
+  background: $light
+  color: $mid
 
 .row-dark
-  background: $grey
-  color: $yellow
+  background: $dark
+  color: $light
 
-  a:hover
-    color: $yellow
+  h3
+    color: $red
 
 .row-footer
-  background: $black
-  color: $white  
+  background: $dark
+  color: $light  
   text-align: left
   padding-bottom: $baseUnit
 
-.row-dark, .row-light
-  padding-top: 10px
-  padding-bottom: 10px
+.row-light, .row-mid, .row-dark
+  padding-top: $baseUnit / 2
+  padding-bottom: $baseUnit / 2
   border: 0
 
 @media (min-width: 576px)
-  .row-dark, .row-light, .row-tagline, .row-footer
+  .row-light, .row-mid, .row-dark, .row-tagline, .row-footer
     padding-top: $baseUnit
     padding-bottom: $baseUnit
 
@@ -89,27 +102,29 @@ a:hover
 .row-platforms
   text-align: center
 
-
   i
     font-size: 48px
 
 @media (max-width: 576px)
-  .row-platforms i
+  .row-platforms
+  
+  .col-sm-12
+    margin-bottom: $baseUnit / 2
+
+  i
     font-size: 24px
 
 .row-footer
   i
     font-size: 24px
 
-  a:hover
-    color: $yellow
-
 /**
  * Cols
  */
 
-.col-center-text
-  text-align: center
+.col-center-elements
+  h1, h2, h3, h4, h5, h6, p, a, img
+    text-align: center !important
 
 .col-collection-title
   h2
@@ -122,21 +137,29 @@ a:hover
   background-position: center
   background-repeat: no-repeat
 
+.col-sotce
+  p
+    @extend .code
+    color: $red
+    font-size: 12px
+    width: 100%
+    text-align: center
+
 /**
  * Layout
  */
 
 .container-fluid-home
-  padding-left: $baseUnit / 2
-  padding-right: $baseUnit / 2
+  padding-left: 15px
+  padding-right: 15px
   
-.container-fluid
-  padding-left: $baseUnit / 2
-  padding-right: $baseUnit / 2
-  padding-top: $baseUnit
+.container-fluid-default
+  padding-top: $baseUnit * 2
+  padding-left: 15px
+  padding-right: 15px
 
 /**
- * Typography
+ * Typography & Brand
  */
 
 .code
@@ -153,27 +176,46 @@ a:hover
   @extend .abstract-typography
   font-weight: 300
 
+h1, h2, h3, h4, h5
+  @extend .light-typography
+  text-align: center
+
+pre,
+blockquote p
+  @extend .code
+  color: $red
+
+@media (min-width: 576px)
+  h1, h2, h3, h4, h5
+    text-align: left
+
+.logo
+  padding-top: $baseUnit
+  padding-bottom: $baseUnit / 2
+
 .hero
   background-color: rgba(7, 16, 19, .8)
-  padding-top: 10px
-  padding-bottom: 10px
+  padding: 10px
+  width: 80%
 
-  h1
-    @extend .light-typography
+  h1, h2, a
+    text-align: center !important
 
   .tagline
     @extend .code
     font-weight: 100
     font-size: 16px
-    color: $white
+    color: $light
 
     .dud
-      color: darken($white, 25%)
+      color: darken($light, 25%)
 
   @media (min-width: 576px)
     .tagline  
       font-size: 24px
 
+.card
+  @extend .row-dark
 
 /**
  * Release
@@ -181,16 +223,16 @@ a:hover
 
 .release-form
   @extend .code
-  background: $grey
+  background: $mid
   padding: 10px
-  border: 5px solid $black
+  border: 5px solid $dark
 
 /**
  * Navbar
  */
 
 .fa-bars, .fa-times
-  color: $white
+  color: $light
 
 .button-mobile
   cursor: pointer
@@ -204,6 +246,7 @@ a:hover
 
   i
     float: right
+    color: $yellow
 
   &:focus
     outline: none
@@ -239,7 +282,7 @@ a:hover
   color: $yellow
 
   &:hover
-    color: $white
+    color: $light
     text-decoration: underline
 
   .navbar-brand-full
@@ -258,7 +301,7 @@ nav .navbar-nav li
   margin-left: 16px
 
   a
-    color: $white
+    color: $light
     margin-top: 0
     margin-bottom: 0
     padding-top: 0
@@ -295,12 +338,12 @@ nav .navbar-nav li
 
     &.active .nav-link,
     .nav-link
-      color: $black
-      background-color: $white
+      color: $light
+      background-color: $blue
 
       &:hover, &:active
-        color: $white
-        background: $blue
+        background-color: $mid
+        color: $yellow
 
     a
       padding: 10px 0 10px 0
