@@ -160,7 +160,7 @@ blockquote p {
 .hero {
   background-color: rgba(7, 16, 19, 0.8);
   padding: 10px;
-  width: 80%; }
+  width: 100%; }
   .hero h1, .hero h2, .hero a {
     text-align: center !important; }
   .hero .tagline {
@@ -173,6 +173,9 @@ blockquote p {
     .hero .tagline {
       font-size: 24px; } }
 
+@media (min-width: 576px) {
+  .hero {
+    width: 80%; } }
 /**
  * Release
  */

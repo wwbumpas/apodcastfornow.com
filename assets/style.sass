@@ -199,7 +199,7 @@ blockquote p
 .hero
   background-color: rgba(7, 16, 19, .8)
   padding: 10px
-  width: 80%
+  width: 100%
 
   h1, h2, a
     text-align: center !important
@@ -219,6 +219,10 @@ blockquote p
 
 .card
   @extend .row-dark
+
+@media (min-width: 576px)
+  .hero
+    width: 80%
 
 /**
  * Release
