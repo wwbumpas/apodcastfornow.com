@@ -3,7 +3,7 @@
  */
 body {
   color: #c7e2eb;
-  background: #071013; }
+  background: #222E50; }
 
 ::selection {
   color: #FDFE00;
@@ -31,7 +31,7 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px;
-  border-bottom: 4px solid #E83E8C; }
+  border-bottom: 4px solid #222E50; }
 
 @media (min-width: 576px) {
   .row-hero {
@@ -172,6 +172,12 @@ blockquote p {
   @media (min-width: 576px) {
     .hero .tagline {
       font-size: 24px; } }
+
+.card {
+  padding: 0; }
+
+.card-episode {
+  margin: 0; }
 
 @media (min-width: 576px) {
   .hero {

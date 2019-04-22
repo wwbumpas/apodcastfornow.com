@@ -15,7 +15,7 @@ $baseUnit: 50px
 body
   @extend .normal-typography
   color: $light
-  background: $dark
+  background: $mid
 
 ::selection
   color: $yellow
@@ -45,7 +45,7 @@ a:hover
   background-repeat: no-repeat
   background-size: cover
   padding-bottom: $baseUnit
-  border-bottom: 4px solid $red
+  border-bottom: 4px solid $mid
 
 @media (min-width: 576px)
   .row-hero
@@ -105,9 +105,7 @@ a:hover
   i
     font-size: 48px
 
-@media (max-width: 576px)
-  .row-platforms
-  
+@media (max-width: 576px)  
   .col-sm-12
     margin-bottom: $baseUnit / 2
 
@@ -219,6 +217,10 @@ blockquote p
 
 .card
   @extend .row-dark
+  padding: 0
+
+.card-episode
+  margin: 0
 
 @media (min-width: 576px)
   .hero

@@ -32,24 +32,27 @@
 
   <div class="row row-light">
     <div class="col-sm-12 col-md-4 order-md-2 col-img-auto">
-        <div class="card">
-          <div class="card-body">
-            <img src="assets/images/collage.svg" />
+      <h3>UTC: A Podcast For Now</h3>
+      <div class="card">
+        <div class="card-body">
+          <img src="assets/images/collage.svg" />
         </div>
       </div>
+      <br>
+      <p>Think of us as your <strong>aural solarpunk zine</strong> that merges interviews, DJ mixes, hyperstition, talk shows, field recordings, artificial intelligence, and sonic collages.</p>
     </div>
     <div class="col-sm-12 col-md-4 offset-md-2 order-md-1">
-      <h3>UTC is a podcast for now.</h3>
-      <p>Think of us as your <strong>aural solarpunk zine</strong> that merges:</p>
-      <ul>
-        <li>Interviews</li>
-        <li>DJ mixes</li>
-        <li>Hyperstition</li>
-        <li>Talk shows</li>
-        <li>Field recordings</li>
-        <li>Artificial intelligence</li>
-        <li>Sonic collages</li>
-      </ul>
+      <h3>Latest Episodes</h3>
+      {% for episode in site.episodes limit:3 %}
+      <div class="card card-episode">
+        <div class="card-body">
+          <h4><a href="/episodes#{{ episode.number }}">{{ episode.title }}</a></h4>
+          <pre>{{ episode.date }}</pre>
+          <p>{{ episode.notesShort }}</p>
+          <a href="/episodes#{{ episode.number }}">Read more...</a>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 

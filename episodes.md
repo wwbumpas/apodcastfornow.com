@@ -9,7 +9,7 @@ exclude: false
 {%- unless isFirst -%}, {%- endunless -%}
 {%- assign isFirst = false -%}
 <div class="row">
-  <div class="col col-collection-title">
+  <div class="col col-collection-title" id="anchor{{episodes.number}}">
     <h2>{{ episodes.title }}</h2> <em>&#35;{{ episodes.number }}</em>
     <pre>{{ episodes.date }}</pre>
     <hr>
@@ -18,7 +18,7 @@ exclude: false
 <div class="row">
   <div class="col-md-6 col-sm-12">
     <strong>Notes</strong>
-    <p>{{ episodes.notes }}</p>
+    <p>{{ episodes.notesLong }}</p>
   </div>
   <div class="col-md-6 col-sm-12">
     <strong>Credits</strong>
