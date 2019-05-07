@@ -1,163 +1,32 @@
 /**
  * Variables
  */
-$blue: #06AED5
-$yellow: #FDFE00
 $dark: #071013 // 7, 16, 19
-$mid: #222E50
-$yellowSecondary: #FCBA04
-$red: #E83E8C
 $light: lighten($dark, 80%)
+$white: #FFFFFF
 
-$baseUnit: 50px
-
+$baseUnit: 10px
 
 body
-  @extend .normal-typography
-  color: $light
-  background: $mid
+  color: $white
+  background: #ccc
 
 ::selection
-  color: $yellow
-  background: $red
+  color: $dark
+  background: $white
 
-.btn-primary
-  background-color: $blue
-  border-color: $blue
-
-  &:hover
-    background-color: $mid
-    border-color: $mid
-    color: $yellow
-
-a
-  color: $blue
-
-a:hover
-  color: $yellow
-
-/**
- * Rows
- */
-
-.row-hero
-  background-image: url("images/15-115.jpg")
-  background-repeat: no-repeat
-  background-size: cover
-  padding-bottom: $baseUnit
-  border-bottom: 4px solid $mid
-
-@media (min-width: 576px)
-  .row-hero
-    height: 500px
-
-.row-hero
-  h1, em, button
-    display: block
-    margin: auto
-
-  h1
-    color: #FFFFFF
-
-  em, button
-    color: $light  
-
-.row-light
-  background: $light
-  color: $mid
-
-  h3
-    color: $red
-
-.row-mid
-  background: $light
-  color: $mid
-
-.row-dark
-  background: $dark
-  color: $light
-
-  h3
-    color: $red
-
-.row-footer
-  background: $dark
-  color: $light  
-  text-align: left
-  padding-bottom: $baseUnit
-
-.row-light, .row-mid, .row-dark
-  padding-top: $baseUnit / 2
-  padding-bottom: $baseUnit / 2
-  border: 0
-
-@media (min-width: 576px)
-  .row-light, .row-mid, .row-dark, .row-tagline, .row-footer
-    padding-top: $baseUnit
-    padding-bottom: $baseUnit
-
-.row-page-title
-    margin-bottom: $baseUnit
-
-.row-platforms
-  text-align: center
-
-  i
-    font-size: 48px
-
-@media (max-width: 576px)  
-  .col-sm-12
-    margin-bottom: $baseUnit / 2
-
-  i
-    font-size: 24px
-
-.row-footer
-  i
-    font-size: 24px
-
-/**
- * Cols
- */
-
-.col-center-elements
-  h1, h2, h3, h4, h5, h6, p, a, img
-    text-align: center !important
-
-.col-collection-title
-  h2
-    display: inline
-
-.col-img-auto img
-  width:  100% /*or 70%, or what you want*/
-  height: 100% /*or 70%, or what you want*/
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
-
-.col-sotce
-  
-  p
-    width: 100%
-    text-align: center
-
-  a
-    @extend .code
-    color: $red
-    font-size: 12px
-  
 /**
  * Layout
  */
 
 .container-fluid-home
-  padding-left: 15px
-  padding-right: 15px
+  padding-left: 0
+  padding-right: 0
   
 .container-fluid-default
-  padding-top: $baseUnit * 2
-  padding-left: 15px
-  padding-right: 15px
+  padding-top: 0
+  padding-left: 0
+  padding-right: 0
 
 /**
  * Typography & Brand
@@ -169,116 +38,45 @@ a:hover
 .abstract-typography
   font-family: 'Roboto', sans-serif
 
-.normal-typography
-  @extend .abstract-typography
-  font-weight: 400
-
 .light-typography
   @extend .abstract-typography
   font-weight: 300
 
+.normal-typography
+  @extend .abstract-typography
+  font-weight: 400
+
+.strong-typography
+  @extend .abstract-typography
+  font-weight: 800
+
 h1, h2, h3, h4, h5
   @extend .light-typography
-  text-align: center
+
+body
+  @extend .normal-typography
 
 pre,
-blockquote p
+code
   @extend .code
-  color: $red
-
-@media (min-width: 576px)
-  h1, h2, h3, h4, h5
-    text-align: left
-
-.logo
-  padding-top: $baseUnit
-  padding-bottom: $baseUnit / 2
-
-.hero
-  background-color: rgba(7, 16, 19, .8)
-  padding: 10px
-  width: 100%
-
-  h1, h2, a
-    text-align: center !important
-
-  .tagline
-    @extend .code
-    font-weight: 100
-    font-size: 16px
-    color: $light
-
-    .dud
-      color: darken($light, 25%)
-
-  @media (min-width: 576px)
-    .tagline  
-      font-size: 24px
-
-.card
-  @extend .row-dark
-  padding: 0
-
-.card-episode
-  margin: 0
-
-@media (min-width: 576px)
-  .hero
-    width: 80%
-
-/**
- * Release
- */
-
-.release-form
+ 
+.tagline
   @extend .code
-  background: $mid
-  padding: 10px
-  border: 5px solid $dark
+  font-weight: 100
+  font-size: 16px
+  color: $light
+
+  .dud
+    color: darken($light, 25%)
 
 /**
  * Navbar
  */
 
-.fa-bars, .fa-times
-  color: $light
-
-.button-mobile
-  cursor: pointer
-  display: none
-  background: none
-  border-radius: 0
-  border: none
-  padding: 0
-  width: 40px
-  height: 40px
-
-  i
-    float: right
-    color: $yellow
-
-  &:focus
-    outline: none
-
-  .fa-times
-    display: block
-
-  .fa-bars
-    display: none
-
-  &.collapsed
-  
-    .fa-times
-      display: none
-
-    .fa-bars
-      display: block
-
 .navbar
   @extend .light-typography
-  background-color: rgba(7, 16, 19, 0)
-  padding: 1.5rem 15px 1rem 15px
-  align-items: baseline
+  background-color: rgba(7, 16, 19, 1) // 0
+  padding: 10px
   -webkit-transition: background-color .5s
   -moz-transition: background-color .5s
   transition: background-color .5s
@@ -288,14 +86,56 @@ blockquote p
   background-color: rgba(7, 16, 19, 1)
 
 .navbar-brand
-  color: $yellow
+  padding: 0
+  color: $white
 
-  &:hover
-    color: $light
-    text-decoration: underline
+  .navbar-brand-image
+    width: 20%
+    float: left
 
-  .navbar-brand-full
-    display: none
+    img
+      width: 100%
+      height: auto
+
+  .navbar-brand-typography
+    width: 60%
+    float: left
+    padding: $baseUnit 0 0 $baseUnit
+
+  .navbar-brand-small
+    @extend .strong-typography
+
+.navbar-brand-small,
+.navbar-brand-full,
+.navbar-menu
+  font-size: 14px
+
+.navbar-menu
+  @extend .light-typography
+  color: $white
+  text-align: center
+  cursor: pointer
+  display: none
+  background: none
+  border-radius: 0
+  border-top: 5px solid $white
+  border-right: none
+  border-bottom: none
+  border-left: none
+  padding: 0
+  width: 40px
+  height: 40px
+  position: absolute
+  top: 28px
+  right: $baseUnit
+
+  &:focus
+    outline: none
+
+nav .navbar-nav li
+  @extend .strong-typography
+
+
 
 @media (min-width: 575.98px)
   .navbar-brand
@@ -310,7 +150,7 @@ nav .navbar-nav li
   margin-left: 16px
 
   a
-    color: $light
+    color: red
     margin-top: 0
     margin-bottom: 0
     padding-top: 0
@@ -327,50 +167,34 @@ nav .navbar-nav li
 
 @media (max-width: 575.98px)
 
-  .navbar
-    align-items: center
-
   .button-mobile
     display: block
 
-  nav ul.navbar-nav
+  nav .navbar-nav
     margin-top: 10px
 
-  nav .navbar-nav li
-    margin-left: 0
-    margin-bottom: 10px
-    margin-top: 10px
-    text-align: center
+    li
+      font-size: 14px
+      margin-left: 0
+      margin-bottom: 10px
+      margin-top: 10px
+      text-align: right
 
-    &.active span
-      display: inline
+      &.active span
+        display: inline
 
-    &.active .nav-link,
-    .nav-link
-      color: $light
-      background-color: $blue
+      &.active .nav-link,
+      .nav-link
+        color: $white
+        background-color: $dark
 
-      &:hover, &:active
-        background-color: $mid
-        color: $yellow
+        &:hover, &:active
+          background-color: $white
+          color: $dark
+          padding-right: 10px
 
     a
       padding: 10px 0 10px 0
 
       &:hover, &:active
         text-decoration: none
-
-/**
- * Footer
- */
-
-footer .col-sm-12
-  margin: $baseUnit 0 0 0
-
-  ul
-    list-style: none
-    margin: 0
-    padding: 0
-    
-    li
-      padding-top: 10px
