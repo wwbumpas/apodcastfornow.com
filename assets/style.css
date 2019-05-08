@@ -3,32 +3,23 @@
  */
 body {
   color: #FFFFFF;
-  background: #ccc; }
+  background: #071013; }
 
-a:hover, a:active {
-  color: #FF0000; }
+a {
+  color: #FFFFFF;
+  text-decoration: underline; }
+  a:hover, a:active {
+    color: #FF0000; }
 
 ::selection {
   color: #071013;
   background: #FFFFFF; }
 
 /**
- * Layout
- */
-.container-fluid-home {
-  padding-left: 0;
-  padding-right: 0; }
-
-.container-fluid-default {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0; }
-
-/**
  * Typography & Brand
  */
-.code, pre,
-code, .tagline {
+.code, blockquote, pre,
+code, .tagline, .row-footer .col-sotce {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 .abstract-typography, .light-typography, h1, h2, h3, h4, h5, .navbar, .navbar-menu, .normal-typography, body, .strong-typography, .navbar-brand .navbar-brand-small, nav .navbar-nav li {
@@ -55,7 +46,7 @@ code, .tagline {
  */
 .navbar {
   background-color: #071013;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
   transition: background-color 0.5s; }
@@ -118,7 +109,8 @@ code, .tagline {
       margin-top: 0;
       margin-bottom: 0;
       padding-top: 0;
-      padding-bottom: 0; }
+      padding-bottom: 0;
+      text-decoration: none; }
     nav .navbar-nav a:hover {
       text-decoration: underline; }
     nav .navbar-nav span {
@@ -150,5 +142,39 @@ code, .tagline {
       padding: 10px 0 10px 0; }
       nav .navbar-nav a:hover, nav .navbar-nav a:active {
         text-decoration: none; } }
+footer {
+  margin-top: 100px; }
+
+.row-footer {
+  padding-top: 15px;
+  background: #071013; }
+  .row-footer a {
+    color: #FFFFFF;
+    text-decoration: underline; }
+    .row-footer a:hover {
+      color: #FF0000; }
+  .row-footer .col-sm-12 {
+    padding-bottom: 10px; }
+    .row-footer .col-sm-12 ul {
+      margin: 0;
+      padding: 0 0 10px 0; }
+      .row-footer .col-sm-12 ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 5px 0; }
+        .row-footer .col-sm-12 ul li a {
+          text-decoration: none; }
+          .row-footer .col-sm-12 ul li a:hover {
+            text-decoration: underline; }
+  .row-footer .col-sotce {
+    text-align: center;
+    padding: 10px 0; }
+    .row-footer .col-sotce a {
+      text-decoration: none; }
+      .row-footer .col-sotce a:hover {
+        text-decoration: underline; }
+
+.container-fluid {
+  margin-top: 100px; }
 
 /*# sourceMappingURL=style.css.map */

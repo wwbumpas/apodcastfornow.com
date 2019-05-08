@@ -7,32 +7,26 @@ $light: lighten($dark, 80%)
 $white: #FFFFFF
 
 $baseUnit: 10px
+$defaultPadding: 15px
 
 body
   color: $white
-  background: #ccc
+  background: $dark
 
 a
+  color: $white
+  text-decoration: underline
+
   &:hover,
   &:active
     color: $accent
 
+blockquote
+  @extend .code
+
 ::selection
   color: $dark
   background: $white
-
-/**
- * Layout
- */
-
-.container-fluid-home
-  padding-left: 0
-  padding-right: 0
-  
-.container-fluid-default
-  padding-top: 0
-  padding-left: 0
-  padding-right: 0
 
 /**
  * Typography & Brand
@@ -82,7 +76,7 @@ code
 .navbar
   @extend .light-typography
   background-color: rgba(7, 16, 19, 1) // 0
-  padding: 10px
+  padding: $baseUnit $defaultPadding $baseUnit $defaultPadding
   -webkit-transition: background-color .5s
   -moz-transition: background-color .5s
   transition: background-color .5s
@@ -160,6 +154,7 @@ nav .navbar-nav li
       margin-bottom: 0
       padding-top: 0
       padding-bottom: 0
+      text-decoration: none
 
     a:hover
       text-decoration: underline
@@ -200,3 +195,54 @@ nav .navbar-nav li
 
       &:hover, &:active
         text-decoration: none
+
+
+footer
+  margin-top: 100px
+
+.row-footer
+  padding-top: $defaultPadding
+  background: $dark
+
+  a
+    color: $white
+    text-decoration: underline
+
+    &:hover
+      color: $accent
+
+  .col-sm-12
+    padding-bottom: $baseUnit
+
+    ul
+      margin: 0
+      padding: 0 0 $baseUnit 0
+
+      li
+        list-style: none
+        margin: 0
+        padding: 0 0 5px 0
+  
+        a
+          text-decoration: none
+
+          &:hover
+            text-decoration: underline
+  
+  .col-sotce
+    @extend .code
+    text-align: center
+    padding: $baseUnit 0
+
+    a
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+.container-fluid
+  margin-top: 100px
+
+
+    
+
