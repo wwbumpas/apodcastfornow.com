@@ -1,6 +1,9 @@
 /**
  * Variables
  */
+/**
+ * Globals
+ */
 body {
   color: #FFFFFF;
   background: #ccc; }
@@ -9,20 +12,17 @@ a:hover, a:active {
   color: #FF0000; }
 
 ::selection {
-  color: #071013;
-  background: #FFFFFF; }
+  color: #FFFFFF;
+  background: #FF0000; }
 
-/**
- * Layout
- */
-.container-fluid-home {
-  padding-left: 0;
-  padding-right: 0; }
-
-.container-fluid-default {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0; }
+.btn-primary {
+  background: #FF0000;
+  border-color: #FF0000; }
+  .btn-primary:hover, .btn-primary:active {
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #FF0000 !important;
+    outline: none; }
 
 /**
  * Typography & Brand
@@ -31,7 +31,7 @@ a:hover, a:active {
 code, .tagline {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
-.abstract-typography, .light-typography, h1, h2, h3, h4, h5, .navbar, .navbar-menu, .normal-typography, body, .strong-typography, .navbar-brand .navbar-brand-small, nav .navbar-nav li {
+.abstract-typography, .light-typography, h1, h2, h3, h4, h5, .navbar, .navbar-menu, .normal-typography, body, .strong-typography, .navbar-brand .navbar-brand-small, .navbar-nav li {
   font-family: "Roboto", sans-serif; }
 
 .light-typography, h1, h2, h3, h4, h5, .navbar, .navbar-menu {
@@ -40,21 +40,38 @@ code, .tagline {
 .normal-typography, body {
   font-weight: 400; }
 
-.strong-typography, .navbar-brand .navbar-brand-small, nav .navbar-nav li {
+.strong-typography, .navbar-brand .navbar-brand-small, .navbar-nav li {
   font-weight: 800; }
 
 .tagline {
   font-weight: 100;
-  font-size: 16px;
-  color: #c7e2eb; }
+  font-size: 32px;
+  color: #FFFFFF;
+  text-align: center;
+  height: 100px;
+  margin-top: 50px; }
   .tagline .dud {
-    color: #6ab1c8; }
+    color: #bfbfbf; }
+
+/**
+ * Hero
+ */
+.row-hero {
+  background-image: url("images/samantha-keely-smith-untitled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 500px; }
+
+.row-dark {
+  background: #071013;
+  padding: 50px 0 50px 0; }
 
 /**
  * Navbar
  */
 .navbar {
-  background-color: #071013;
+  background-color: rgba(7, 16, 19, 0);
   padding: 10px;
   -webkit-transition: background-color 0.5s;
   -moz-transition: background-color 0.5s;
@@ -77,14 +94,18 @@ code, .tagline {
 
 .navbar-brand-small,
 .navbar-brand-full,
-.navbar-menu {
+.navbar-menu,
+.nav-link {
   font-size: 14px; }
+
+.navbar-menu.collapsed {
+  border-top: 5px solid #FFFFFF; }
 
 .navbar-menu {
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
-  display: none;
+  display: block;
   background: none;
   border-radius: 0;
   border-top: 5px solid #FF0000;
@@ -95,60 +116,57 @@ code, .tagline {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 28px;
+  top: 29px;
   right: 10px; }
   .navbar-menu:focus {
     outline: none; }
 
-.navbar-menu.collapsed {
-  border-top: 5px solid #FFFFFF; }
+.navbar-nav {
+  margin-top: 10px; }
+  .navbar-nav li {
+    margin: 10px 0 10px 0;
+    text-align: right; }
+    .navbar-nav li.active span {
+      display: inline; }
+    .navbar-nav li .nav-link {
+      color: #FF0000; }
+      .navbar-nav li .nav-link:hover, .navbar-nav li .nav-link:active {
+        text-decoration: underline; }
 
 @media (min-width: 575.98px) {
-  nav .navbar-nav {
+  .button-mobile {
+    display: none; }
+
+  .navbar-nav {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    padding-top: 12px; }
-    nav .navbar-nav li {
-      margin-left: 16px;
+    justify-content: flex-end; }
+    .navbar-nav li {
+      border-top: 5px solid #FFFFFF;
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+      padding: 0;
+      height: 40px;
+      margin-left: 20px;
       font-size: 14px; }
-    nav .navbar-nav a {
-      color: #FFFFFF;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-top: 0;
-      padding-bottom: 0; }
-    nav .navbar-nav a:hover {
-      text-decoration: underline; }
-    nav .navbar-nav span {
-      display: none; }
-    nav .navbar-nav.active span {
-      display: inline; } }
-@media (max-width: 575.98px) {
-  .button-mobile {
-    display: block; }
-
-  nav .navbar-nav {
-    margin-top: 10px; }
-    nav .navbar-nav li {
-      font-size: 14px;
-      margin-left: 0;
-      margin-bottom: 10px;
-      margin-top: 10px;
-      text-align: right; }
-      nav .navbar-nav li.active span {
+      .navbar-nav li:hover {
+        border-top-color: #FF0000; }
+      .navbar-nav li span {
+        display: none; }
+      .navbar-nav li.active span {
         display: inline; }
-      nav .navbar-nav li.active .nav-link,
-      nav .navbar-nav li .nav-link {
-        color: #FF0000; }
-        nav .navbar-nav li.active .nav-link:hover, nav .navbar-nav li.active .nav-link:active,
-        nav .navbar-nav li .nav-link:hover,
-        nav .navbar-nav li .nav-link:active {
-          text-decoration: underline; }
-    nav .navbar-nav a {
-      padding: 10px 0 10px 0; }
-      nav .navbar-nav a:hover, nav .navbar-nav a:active {
-        text-decoration: none; } }
+      .navbar-nav li .nav-link {
+        color: #FFFFFF;
+        font-weight: 300;
+        margin: 0; }
+        .navbar-nav li .nav-link:hover {
+          text-decoration: none; } }
+/**
+ * Shame
+ */
+.overflow-hidden {
+  overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

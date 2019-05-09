@@ -10,41 +10,33 @@
 
 
 
-  <main class="container-fluid-home">
+  <main class="container-fluid container-fluid-home">
 
 
-<!-- 
     <div class="row row-hero">
-      <div class="col flex-column d-flex align-items-center ">
-          <h2 class="tagline">A Podcast For Now</h2>
-          <button class="btn btn-primary btn-lg listen-now">Listen Now</button>
+      <div class="col flex-column d-flex align-items-center justify-content-center overflow-hidden">
+          <h2 class="tagline p-2 align-self-center justify-content-center">A Podcast For Now</h2>
+          <button class="btn btn-primary btn-lg listen-now p-2">Listen Now</button>
       </div>
     </div>
 
 
 
-  <div class="row row-light">
+  <div class="row row-dark">
+
     <div class="col-sm-12 col-md-4 order-md-2 col-img-auto">
-      <h3>UTC: A Podcast For Now</h3>
-      <div class="card">
-        <div class="card-body">
-          <img src="assets/images/collage.svg" />
-        </div>
-      </div>
+      <img src="assets/images/collage.svg" />
       <br>
-      <p>Think of us as your <strong>aural solarpunk zine</strong> that merges interviews, DJ mixes, hyperstition, talk shows, field recordings, artificial intelligence, and sonic collages.</p>
+      <p>Coordinated Universal Time is a sonic collage of foxfire-side readings, thinking machines, disembodied conversations, music we found in this world or made in another. Deep time reverberations and field recordings from the front lines of a future held in common. An aural zine hand-pasted and neural-networked by solar golems from the 23rd century, still quickening in the coals of the present: a podcast for now.</p>
     </div>
+
     <div class="col-sm-12 col-md-4 offset-md-2 order-md-1">
-      <h3>Latest Episodes</h3>
+
       {% for episode in site.episodes limit:3 %}
-      <div class="card card-episode">
-        <div class="card-body">
-          <h4><a href="/episodes#{{ episode.number }}">{{ episode.title }}</a></h4>
+          <h2><a href="/episodes#{{ episode.number }}">{{ episode.title }}</a></h4>
           <pre>{{ episode.date }}</pre>
           <p>{{ episode.notesShort }}</p>
           <a href="/episodes#{{ episode.number }}">Read more...</a>
-        </div>
-      </div>
       {% endfor %}
     </div>
   </div>
@@ -107,7 +99,6 @@
 
 
 {%- include footer.html -%}
--->
 
 
   </main>

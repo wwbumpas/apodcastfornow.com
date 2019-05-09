@@ -98,13 +98,13 @@ if ($('.tagline').length) {
   next();
 }
 
-if ($('.container-fluid-default').length) {
+if ($('.container-fluid').length) {
   $('.navbar').addClass('navBackgroundVisible');
 }
 
 $(window).scroll(function() {
   if ($('.container-fluid-home').length) {
-    if ($(window).scrollTop() > 100 ) {
+    if ($(window).scrollTop() > 1 ) {
       $('.navbar').addClass('navBackgroundVisible');
     } else {
       $('.navbar').removeClass('navBackgroundVisible');

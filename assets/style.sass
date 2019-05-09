@@ -2,11 +2,18 @@
  * Variables
  */
 $dark: #071013 // 7, 16, 19
+$grey: #333333
 $accent: #FF0000
 $light: lighten($dark, 80%)
 $white: #FFFFFF
 
 $baseUnit: 10px
+
+
+
+/**
+ * Globals
+ */
 
 body
   color: $white
@@ -18,21 +25,21 @@ a
     color: $accent
 
 ::selection
-  color: $dark
-  background: $white
+  color: $white
+  background: $accent
 
-/**
- * Layout
- */
+.btn-primary
+  background: $accent
+  border-color: $accent
 
-.container-fluid-home
-  padding-left: 0
-  padding-right: 0
-  
-.container-fluid-default
-  padding-top: 0
-  padding-left: 0
-  padding-right: 0
+  &:hover,
+  &:active
+    background-color: $white !important
+    border-color: $white !important
+    color: $accent !important
+    outline: none
+
+
 
 /**
  * Typography & Brand
@@ -69,11 +76,42 @@ code
 .tagline
   @extend .code
   font-weight: 100
-  font-size: 16px
-  color: $light
+  font-size: 32px
+  color: $white
+  text-align: center
+  height: 100px
+  margin-top: 50px
 
   .dud
-    color: darken($light, 25%)
+    color: darken($white, 25%)
+
+
+
+/**
+ * Hero
+ */
+
+
+.row-hero
+  background-image: url("images/samantha-keely-smith-untitled.png")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom
+  height: 500px
+
+.row-dark
+  background: $dark
+  padding: 50px 0 50px 0
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Navbar
@@ -81,7 +119,7 @@ code
 
 .navbar
   @extend .light-typography
-  background-color: rgba(7, 16, 19, 1) // 0
+  background-color: rgba(7, 16, 19, 0) // 0
   padding: 10px
   -webkit-transition: background-color .5s
   -moz-transition: background-color .5s
@@ -109,15 +147,19 @@ code
 
 .navbar-brand-small,
 .navbar-brand-full,
-.navbar-menu
+.navbar-menu,
+.nav-link
   font-size: 14px
+
+.navbar-menu.collapsed
+  border-top: 5px solid $white
 
 .navbar-menu
   @extend .light-typography
   color: $white
   text-align: center
   cursor: pointer
-  display: none
+  display: block
   background: none
   border-radius: 0
   border-top: 5px solid $accent
@@ -128,75 +170,73 @@ code
   width: 40px
   height: 40px
   position: absolute
-  top: 28px
-  right: $baseUnit
+  top: 29px
+  right: 10px
 
   &:focus
     outline: none
 
-.navbar-menu.collapsed
-  border-top: 5px solid $white
+.navbar-nav
+  margin-top: 10px
 
-  
-nav .navbar-nav li
-  @extend .strong-typography
-
-@media (min-width: 575.98px)
-
-  nav .navbar-nav
-    width: 100%
-    display: flex
-    flex-direction: row
-    justify-content: flex-end
-    padding-top: 12px
-
-    li
-      margin-left: 16px
-      font-size: 14px
-
-    a
-      color: $white
-      margin-top: 0
-      margin-bottom: 0
-      padding-top: 0
-      padding-bottom: 0
-
-    a:hover
-      text-decoration: underline
-
-    span
-      display: none
+  li
+    @extend .strong-typography
+    margin: 10px 0 10px 0
+    text-align: right
 
     &.active span
       display: inline
 
-@media (max-width: 575.98px)
+    .nav-link
+      color: $accent
+
+      &:hover, &:active
+        text-decoration: underline
+  
+@media (min-width: 575.98px)
 
   .button-mobile
-    display: block
+    display: none
 
-  nav .navbar-nav
-    margin-top: 10px
+  .navbar-nav
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
 
     li
+      border-top: 5px solid $white
+      border-right: none
+      border-bottom: none
+      border-left: none
+      padding: 0
+      height: 40px
+      margin-left: 20px
       font-size: 14px
-      margin-left: 0
-      margin-bottom: 10px
-      margin-top: 10px
-      text-align: right
+
+      &:hover
+        border-top-color: $accent
+
+      span
+        display: none
 
       &.active span
         display: inline
 
-      &.active .nav-link,
       .nav-link
-        color: $accent
+        color: $white
+        font-weight: 300
+        margin: 0
 
-        &:hover, &:active
-          text-decoration: underline
+        &:hover
+          text-decoration: none
 
-    a
-      padding: 10px 0 10px 0
 
-      &:hover, &:active
-        text-decoration: none
+
+/**
+ * Shame
+ */     
+
+// Bootstrap says this class is implemented, but it doesn't work out of the box:
+.overflow-hidden
+  overflow: hidden     
