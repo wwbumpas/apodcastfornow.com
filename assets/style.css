@@ -62,6 +62,9 @@ code, .tagline, .row-footer .col-sotce {
 .container-fluid {
   margin-top: 100px; }
 
+.container-fluid.container-fluid-home {
+  margin-top: 0; }
+
 .row-hero {
   background-image: url("images/samantha-keely-smith-untitled.png");
   background-repeat: no-repeat;
@@ -78,15 +81,17 @@ code, .tagline, .row-footer .col-sotce {
  */
 .navbar {
   background-color: rgba(7, 16, 19, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
   padding: 10px;
   padding: 10px 15px 10px 15px;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  transition: background-color 0.5s; }
+  -webkit-transition: background-color 1s, border-bottom 1s;
+  -moz-transition: background-color 1s, border-bottom 1s;
+  transition: background-color 1s, border-bottom 1s; }
 
 .navBackgroundVisible,
 .navToggleBackgroundVisible {
-  background-color: #071013; }
+  background-color: #071013;
+  border-bottom: 1px solid white; }
 
 .navbar-brand {
   padding: 0;
@@ -203,9 +208,10 @@ footer {
         color: #FFFFFF;
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 0;
+        padding-top: 6px;
         padding-bottom: 0;
-        text-decoration: none; }
+        text-decoration: none;
+        font-weight: 300; }
         .navbar-nav li .nav-link span {
           display: none; } }
 /**

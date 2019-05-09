@@ -101,6 +101,9 @@ code
 .container-fluid
   margin-top: 100px
 
+.container-fluid.container-fluid-home
+  margin-top: 0
+
 .row-hero
   background-image: url("images/samantha-keely-smith-untitled.png")
   background-repeat: no-repeat
@@ -121,15 +124,17 @@ code
 .navbar
   @extend .light-typography
   background-color: rgba(7, 16, 19, 0)
+  border-bottom: 1px solid rgba(0, 0, 0, 0)
   padding: 10px
   padding: $baseUnit $defaultPadding $baseUnit $defaultPadding
-  -webkit-transition: background-color .5s
-  -moz-transition: background-color .5s
-  transition: background-color .5s
+  -webkit-transition: background-color 1s, border-bottom 1s
+  -moz-transition: background-color 1s, border-bottom 1s
+  transition: background-color 1s, border-bottom 1s
 
 .navBackgroundVisible,
 .navToggleBackgroundVisible
   background-color: rgba(7, 16, 19, 1)
+  border-bottom: 1px solid rgba(255, 255, 255, 1)
 
 .navbar-brand
   padding: 0
@@ -280,9 +285,10 @@ footer
         color: $white
         margin-top: 0
         margin-bottom: 0
-        padding-top: 0
+        padding-top: 6px
         padding-bottom: 0
         text-decoration: none
+        font-weight: 300
 
         span
           display: none
