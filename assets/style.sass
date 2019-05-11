@@ -1,9 +1,11 @@
 /**
  * Variables
  */
-$dark: #071013 // 7, 16, 19
+$dark: lighten(#071013, 5%)
+$darkRGBAtransparent: rgba(14, 32, 38, 0)
+$darkRGBAopaque: rgba(14, 32, 38, 1)
 $grey: lighten($dark, 10%)
-$accent: #00FF00
+$accent: #00F0FF
 $white: #FFFFFF
 
 $baseUnit: 10px
@@ -104,7 +106,7 @@ hr
 
 .card
   background: $grey
-  margin-bottom: $baseUnit
+  margin-bottom: 30px
 
 .tagline
   @extend .code
@@ -149,8 +151,11 @@ hr
   .col-sm-12
     margin-bottom: 50px
 
-  i
-    font-size: 48px
+    a
+      text-decoration: none
+
+    i
+      font-size: 48px
 
 
 
@@ -160,18 +165,18 @@ hr
 
 .navbar
   @extend .light-typography
-  background-color: rgba(7, 16, 19, 0)
-  border-bottom: 1px solid rgba(0, 0, 0, 0)
+  background-color: $darkRGBAtransparent
+  border-bottom: 1px solid $darkRGBAtransparent
   padding: 10px
   padding: $baseUnit $defaultPadding $baseUnit $defaultPadding
-  -webkit-transition: background-color 1s, border-bottom 1s
-  -moz-transition: background-color 1s, border-bottom 1s
-  transition: background-color 1s, border-bottom 1s
+  -webkit-transition: background-color .5s, border-bottom .5s
+  -moz-transition: background-color .5s, border-bottom .5s
+  transition: background-color .5s, border-bottom .5s
 
 .navBackgroundVisible,
 .navToggleBackgroundVisible
-  background-color: rgba(7, 16, 19, 1)
-  border-bottom: 1px solid rgba(255, 255, 255, 1)
+  background-color: $darkRGBAopaque
+  border-bottom: 1px solid $white
 
 .navbar-brand
   padding: 0
@@ -283,8 +288,7 @@ footer
   
   .col-sotce
     @extend .code
-    text-align: center
-    padding: $baseUnit 0
+    font-size: 12px
 
     a
       text-decoration: none
