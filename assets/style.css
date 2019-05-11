@@ -104,6 +104,8 @@ hr {
 
 .row-platforms {
   text-align: center; }
+  .row-platforms .col-sm-12 {
+    margin-bottom: 50px; }
   .row-platforms i {
     font-size: 48px; }
 
@@ -166,6 +168,8 @@ hr {
 
 .navbar-nav {
   margin-top: 10px; }
+  .navbar-nav li:before {
+    content: none; }
   .navbar-nav li {
     margin: 10px 0 10px 0;
     text-align: right; }
@@ -219,6 +223,9 @@ footer {
 @media (min-width: 575.98px) {
   .button-mobile {
     display: none; }
+
+  .row-platforms .col-sm-12 {
+    margin-bottom: 0; }
 
   .navbar-nav {
     width: 100%;

@@ -145,8 +145,13 @@ hr
   @extend .row-home
   text-align: center
 
+  .col-sm-12
+    margin-bottom: 50px
+
   i
     font-size: 48px
+
+
 
 /**
  * Navbar
@@ -216,6 +221,9 @@ hr
 
 .navbar-nav
   margin-top: 10px
+
+  li:before
+    content: none
 
   li
     @extend .strong-typography
@@ -293,6 +301,9 @@ footer
 
   .button-mobile
     display: none
+
+  .row-platforms .col-sm-12
+    margin-bottom: 0
 
   .navbar-nav
     width: 100%
