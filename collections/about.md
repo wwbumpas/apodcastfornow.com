@@ -6,6 +6,12 @@ exclude: false
 order: 3
 ---
 
+## About
+
+{{ site.long_description }}
+
+<br><br><br>
+
 ## Etymology
 
 From [the Wikipedia entry](https://en.wikipedia.org/wiki/Coordinated_Universal_Time#Etymology) on Coordinated Universal Time:
