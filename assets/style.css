@@ -71,7 +71,8 @@ hr {
   border-top: 5px solid #00FF00; }
 
 .card {
-  background: #152f38; }
+  background: #152f38;
+  margin-bottom: 10px; }
 
 .tagline {
   font-weight: 100;
