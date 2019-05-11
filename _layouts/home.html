@@ -14,36 +14,48 @@
 
 
     <div class="row row-hero">
+
       <div class="col flex-column d-flex align-items-center justify-content-center overflow-hidden">
           <h2 class="tagline p-2 align-self-center justify-content-center">A Podcast For Now</h2>
           <button class="btn btn-primary btn-lg listen-now p-2">Listen Now</button>
       </div>
+
     </div>
 
 
 
-  <div class="row row-dark">
+  <div class="row row-home">
 
-    <div class="col-sm-12 col-md-4 order-md-2 col-img-auto">
-      <img src="assets/images/collage.svg" />
-      <br>
-      <p>Coordinated Universal Time is a sonic collage of foxfire-side readings, thinking machines, disembodied conversations, music we found in this world or made in another. Deep time reverberations and field recordings from the front lines of a future held in common. An aural zine hand-pasted and neural-networked by solar golems from the 23rd century, still quickening in the coals of the present: a podcast for now.</p>
-    </div>
-
-    <div class="col-sm-12 col-md-4 offset-md-2 order-md-1">
-
+    <div class="col-sm-12 col-md-4 offset-md-2">
       {% for episode in site.episodes limit:3 %}
-          <h2><a href="/episodes#{{ episode.number }}">{{ episode.title }}</a></h4>
-          <pre>{{ episode.date }}</pre>
-          <p>{{ episode.notesShort }}</p>
-          <a href="/episodes#{{ episode.number }}">Read more...</a>
+        <div class="card">
+          <div class="card-body">
+            <h2><a href="/episodes#{{ episode.number }}">{{ episode.title }}</a></h4>
+            <p>{{ episode.date }}</p>
+            <p>{{ episode.notesShort }}</p>
+            <a href="/episodes#{{ episode.number }}">Read more...</a>
+          </div>
+        </div>
       {% endfor %}
     </div>
+
+    <div class="col-sm-12 col-md-4">
+      {% for post in site.posts limit:3 %}
+      <div class="card">
+        <div class="card-body">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt }}</p>
+          <a href="{{ post.url | relative_url }}">Read more...</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
   </div>
 
 
 
-  <div class="row row-dark row-platforms">
+  <div class="row row-platforms">
     <div class="col-sm-12 col-md-2 offset-md-2">
       <a href="#"><i class="fab fa-soundcloud"></i><br>SoundCloud</a>
     </div>
@@ -58,44 +70,15 @@
     </div>
   </div>
 
-
-
-  <div class="row row-mid">
-    <div class="col col-center-elements">
-      <h2>Lorem ipusm dolor sit...</h2>
-    </div>
-  </div>
-
-
-
-  <div class="row row-dark">
-    <div class="col-sm-12 col-md-3 offset-md-3 order-md-1 col-img-auto">
-      <img src="assets/images/patreon.svg" />
-    </div>
-    <div class="col-sm-12 col-md-3 order-md-2">
-      <h3>Spread the post-scarcity.</h3>
-      <p>Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. </p>
-      <a href="https://patreon.com/apodcastfornow" class="btn btn-primary btn-block">Become a Patron</a>
-    </div>
-  </div>
-
-
-  
-  <div class="row row-light">
-    <div class="col-md-2"></div>
-      {% for post in site.posts limit:3 %}
-      <div class="col-sm-12 col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt }}</p>
-            <a href="{{ post.url | relative_url }}">Read more...</a>
-          </div>
+  <div class="row row-home">
+    <div class="col-sm-12 col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-body">
+          <p>Coordinated Universal Time is a sonic collage of foxfire-side readings, thinking machines, disembodied conversations, music we found in this world or made in another. Deep time reverberations and field recordings from the front lines of a future held in common. An aural zine hand-pasted and neural-networked by solar golems from the 23rd century, still quickening in the coals of the present: a podcast for now.</p>
         </div>
       </div>
-      {% endfor %}
+    </div>
   </div>
-
 
 
 {%- include footer.html -%}

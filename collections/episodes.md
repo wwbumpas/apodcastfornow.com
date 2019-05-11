@@ -3,6 +3,7 @@ layout: page
 title: Episodes
 permalink: /episodes/
 exclude: false
+order: 1
 ---
 {%- assign isFirst = true -%}
 {%- for episodes in site.episodes -%}
@@ -10,8 +11,8 @@ exclude: false
 {%- assign isFirst = false -%}
 <div class="row">
   <div class="col col-collection-title" id="anchor{{episodes.number}}">
-    <h2>{{ episodes.title }}</h2> <em>&#35;{{ episodes.number }}</em>
-    <pre>{{ episodes.date }}</pre>
+    <h1>{{ episodes.title }}</h1>
+    <p>{{ episodes.date }}</p>
     <hr>
   </div>
 </div>

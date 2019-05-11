@@ -2,13 +2,15 @@
  * Variables
  */
 $dark: #071013 // 7, 16, 19
-$grey: #333333
-$accent: #FF0000
-$light: lighten($dark, 80%)
+$grey: lighten($dark, 10%)
+$accent: #00FF00
 $white: #FFFFFF
 
 $baseUnit: 10px
 $defaultPadding: 15px
+
+$baseWhiteBorder: 5px solid $white
+$baseAccentBorder: 5px solid $accent
 
 
 
@@ -27,9 +29,6 @@ a
   &:hover,
   &:active
     color: $accent
-
-blockquote
-  @extend .code
 
 ::selection
   color: $white
@@ -73,13 +72,39 @@ blockquote
 h1, h2, h3, h4, h5
   @extend .light-typography
 
+  a
+    text-decoration: none
+
 body
   @extend .normal-typography
 
 pre,
-code
+code,
+samp
   @extend .code
- 
+  color: $accent
+
+ul
+  padding: 0 0 0 $baseUnit
+  list-style: none
+
+  li
+    padding: 0 0 $baseUnit / 2 0
+
+  li:before
+    content: "- "
+
+blockquote
+  @extend .normal-typography
+  padding-left: $baseUnit
+  border-left: $baseAccentBorder
+
+hr
+  border-top: $baseAccentBorder
+
+.card
+  background: $grey
+
 .tagline
   @extend .code
   font-weight: 100
@@ -92,14 +117,16 @@ code
   .dud
     color: darken($white, 25%)
 
+.release-form
+  @extend .code
 
 
 /**
- * Rows & Containers
+ * Rows, Columns, & Containers
  */
 
 .container-fluid
-  margin-top: 100px
+  margin-top: 200px
 
 .container-fluid.container-fluid-home
   margin-top: 0
@@ -111,11 +138,15 @@ code
   background-position: bottom
   height: 500px
 
-.row-dark
-  background: $dark
+.row-home
   padding: 50px 0 50px 0
 
+.row-platforms
+  @extend .row-home
+  text-align: center
 
+  i
+    font-size: 48px
 
 /**
  * Navbar
@@ -159,7 +190,7 @@ code
   font-size: 14px
 
 .navbar-menu.collapsed
-  border-top: 5px solid $white
+  border-top: $baseWhiteBorder
 
 .navbar-menu
   @extend .light-typography
@@ -169,7 +200,7 @@ code
   display: block
   background: none
   border-radius: 0
-  border-top: 5px solid $accent
+  border-top: $baseAccentBorder
   border-right: none
   border-bottom: none
   border-left: none
@@ -228,11 +259,13 @@ footer
       margin: 0
       padding: 0 0 $baseUnit 0
 
+      li:before
+        content: none
+
       li
-        list-style: none
         margin: 0
         padding: 0 0 5px 0
-  
+
         a
           text-decoration: none
 
@@ -267,8 +300,11 @@ footer
     flex-direction: row
     justify-content: flex-end
 
+    li:before
+      content: none
+
     li
-      border-top: 5px solid $white
+      border-top: $baseWhiteBorder
       border-right: none
       border-bottom: none
       border-left: none
