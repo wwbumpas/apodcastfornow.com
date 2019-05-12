@@ -1,7 +1,7 @@
 ---
-number: "001"
 date: 2019-04-30
 title: "To Realize a Commoner Earth"
+utcId: utc001
 notesShort:
 >
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean interdum quam sit amet porta mollis.

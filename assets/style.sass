@@ -4,15 +4,25 @@
 $dark: #0E2026
 $darkRGBAtransparent: rgba(14, 32, 38, 0)
 $darkRGBAopaque: rgba(14, 32, 38, 1)
-$grey: #1C3F4B
-$accent: #56E39F
-$white: #FFFFFF
+
+$light: #FCFAF9
+
+$indigo: #1C3F4B
+$accent1: #56E39F
+$accent2: #474044
+$accent3: #4F5165
+$accent4: #48E5C2
+
+$hyperlinkHover: $accent4
 
 $baseUnit: 10px
+$baseFontSize: 1rem
 $defaultPadding: 15px
 
-$baseWhiteBorder: 5px solid $white
-$baseAccentBorder: 5px solid $accent
+$baseWhiteBorder: 5px solid $light
+$thinWhiteBorder: 1px solid $light
+$baseAccentBorder: 5px solid $accent1
+$thinAccentBorder: 1px solid $accent1
 
 
 
@@ -21,32 +31,47 @@ $baseAccentBorder: 5px solid $accent
  */
 
 body
-  color: $white
+  color: $light
   background: $dark
 
 a
-  color: $white
+  color: $light
   text-decoration: underline
 
   &:hover,
   &:active
-    color: $accent
+    color: $hyperlinkHover
 
 ::selection
-  color: $white
-  background: $accent
+  color: $light
+  background: $accent1
+
+@keyframes name-of-animation
+  0%
+    opacity: (0deg)
+  100%
+    transform: rotate(360deg)
 
 .btn-primary
-  background: $accent
-  border-color: $accent
+  background: $accent1
+  border-color: $accent1
+  padding: $baseUnit 40px $baseUnit 40px !important
 
   &:hover,
   &:active
-    background-color: $white !important
-    border-color: $white !important
-    color: $accent !important
+    background-color: $hyperlinkHover !important
+    border-color: $hyperlinkHover !important
+    color: $light !important
     outline: none
 
+.listen-now
+  -webkit-transition: opacity 2s
+  -moz-transition: opacity 2s
+  transition: opacity 2s
+  opacity: 0
+
+.listen-now-visible
+  opacity: 1
 
 
 /**
@@ -71,8 +96,18 @@ a
   @extend .abstract-typography
   font-weight: 800
 
+.ui-typography
+  font-size: $baseFontSize
+
 h1, h2, h3, h4, h5
   @extend .light-typography
+  color: $accent1
+
+h1
+  font-size: 2rem
+
+h2, h3, h4, h5, h6
+  font-size: 1.5rem
 
   a
     text-decoration: none
@@ -84,7 +119,10 @@ pre,
 code,
 samp
   @extend .code
-  color: $accent
+  color: $accent1
+
+time
+  color: $light
 
 ul
   padding: 0 0 0 $baseUnit
@@ -102,23 +140,30 @@ blockquote
   border-left: $baseAccentBorder
 
 hr
-  border-top: $baseAccentBorder
+  border-top: $thinAccentBorder
 
 .card
-  background: $grey
+  background: $indigo
   margin-bottom: 30px
+
+  a
+    color: $accent1
+
+    &:hover,
+    &:active
+      color: $hyperlinkHover
 
 .tagline
   @extend .code
   font-weight: 100
   font-size: 32px
-  color: $white
+  color: $light
   text-align: center
   height: 100px
   margin-top: 50px
 
   .dud
-    color: darken($white, 25%)
+    color: darken($light, 25%)
 
 .home-logo
   width: 100%
@@ -127,7 +172,15 @@ hr
 .release-form
   @extend .code
 
+.sanctuary-of-the-commoner-earth
+  @extend .code
+  font-size: 12px
 
+  a
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
 
 /**
  * Rows, Columns, & Containers
@@ -148,6 +201,9 @@ hr
 
 .row-home
   padding: 50px 0 50px 0
+
+  h2
+    color: $light
 
 .row-platforms
   @extend .row-home
@@ -171,21 +227,23 @@ hr
 .navbar
   @extend .light-typography
   background-color: $darkRGBAtransparent
-  border-bottom: 1px solid $darkRGBAtransparent
+  border-bottom: $thinWhiteBorder
+  border-bottom-color: $darkRGBAtransparent
   padding: 10px
   padding: $baseUnit $defaultPadding $baseUnit $defaultPadding
   -webkit-transition: background-color .5s, border-bottom .5s
   -moz-transition: background-color .5s, border-bottom .5s
   transition: background-color .5s, border-bottom .5s
 
-.navBackgroundVisible,
-.navToggleBackgroundVisible
+.nav-background-visible,
+.nav-toggle-background-visible
   background-color: $darkRGBAopaque
-  border-bottom: 1px solid $white
+  border-bottom: $thinWhiteBorder
 
 .navbar-brand
+  margin: 0
   padding: 0
-  color: $white
+  color: $light
 
   .navbar-brand-image
     width: 70
@@ -196,21 +254,22 @@ hr
     float: left
     padding: $baseUnit 0 0 $baseUnit
 
-  .navbar-brand-small
+  .navbar-brand-acronym
+    @extend .ui-typography
     @extend .strong-typography
 
-.navbar-brand-small,
+.navbar-brand-acronym,
 .navbar-brand-full,
 .navbar-menu,
 .nav-link
-  font-size: 14px
+  @extend .ui-typography
 
 .navbar-menu.collapsed
   border-top: $baseWhiteBorder
 
 .navbar-menu
   @extend .light-typography
-  color: $white
+  color: $light
   text-align: center
   cursor: pointer
   display: block
@@ -224,7 +283,7 @@ hr
   width: 40px
   height: 40px
   position: absolute
-  top: 29px
+  top: 33px
   right: 10px
 
   &:focus
@@ -245,7 +304,7 @@ hr
       display: inline
 
     .nav-link
-      color: $accent
+      color: $accent1
       text-decoration: none
 
       &:hover, &:active
@@ -265,11 +324,11 @@ footer
   background: $dark
 
   a
-    color: $white
+    color: $light
     text-decoration: underline
 
     &:hover
-      color: $accent
+      color: $hyperlinkHover
 
   .col-sm-12
     padding-bottom: $baseUnit
@@ -290,16 +349,6 @@ footer
 
           &:hover
             text-decoration: underline
-  
-  .col-sotce
-    @extend .code
-    font-size: 12px
-
-    a
-      text-decoration: none
-
-      &:hover
-        text-decoration: underline
 
 
 
@@ -307,7 +356,7 @@ footer
  * Desktop
  */
 
-@media (min-width: 575.98px)
+@media (min-width: 767.98px)
 
   .button-mobile
     display: none
@@ -316,6 +365,7 @@ footer
     margin-bottom: 0
 
   .navbar-nav
+    margin: 0
     width: 100%
     display: flex
     flex-direction: row
@@ -331,15 +381,16 @@ footer
       border-left: none
       padding: 0
       height: 40px
+      margin-top: 25px
       margin-left: 20px
       font-size: 14px
 
       &:hover,
       &.active
-        border-top-color: $accent
+        border-top-color: $hyperlinkHover
 
       .nav-link
-        color: $white
+        color: $light
         margin-top: 0
         margin-bottom: 0
         padding-top: 6px

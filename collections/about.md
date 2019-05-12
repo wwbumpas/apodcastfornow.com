@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 exclude: false
-order: 3
+order: 4
 ---
 
 ## About
@@ -33,7 +33,7 @@ See our [first blog post](/2019/04/21/utc-a-podcast-for-now/) for a run down of 
 - [Max](https://cycling74.com/)
 - [Sound Forge](https://www.magix.com/us/music/sound-forge/)
 - [Bitwig](https://www.bitwig.com/en/home.html)
-- The Internet & outer space via [Loopback](https://rogueamoeba.com/loopback)
+- The Internet & outer space via [Loopback](https://rogueamoeba.com/loopback) & [Audio Hijack](https://rogueamoeba.com/audiohijack)
 - Earth via [Tascam](https://tascam.com/us) field recorders & cell phones
 
 **Website**
@@ -47,6 +47,7 @@ See our [first blog post](/2019/04/21/utc-a-podcast-for-now/) for a run down of 
 
 **Operations**
 - [Nextcloud](https://nextcloud.com) for file sharing and project management
+- [Digital Ocean](https://digitalocean.com) for hosting
 - [Discord](https://discord.com) for continuous asynchronous communication
 - [G Suite](https://gsuite.google.com) for contact forms, spreadsheets, and video conferencing
 

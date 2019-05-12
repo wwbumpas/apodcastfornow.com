@@ -16,7 +16,7 @@
     <div class="row row-hero">
 
       <div class="col flex-column d-flex align-items-center justify-content-center overflow-hidden">
-          <h2 class="tagline p-2 align-self-center justify-content-center">A Podcast For Now</h2>
+          <h1 class="tagline p-2 align-self-center justify-content-center">A Podcast For Now</h1>
           <button class="btn btn-primary btn-lg listen-now p-2">Listen Now</button>
       </div>
 
@@ -27,23 +27,28 @@
   <div class="row row-home">
 
     <div class="col-sm-12 col-md-4 offset-md-2">
+      <h2>Episodes</h2>
+      {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
       {% for episode in site.episodes limit:3 %}
         <div class="card">
           <div class="card-body">
-            <h2><a href="/episodes#{{ episode.number }}">{{ episode.title }}</a></h4>
-            <p>{{ episode.date }}</p>
+            <h2><a href="/episodes#{{ episode.utcId }}">{{ episode.title }}</a></h4>
+            <p>{{ episode.date | date: date_format }}</p>
             <p>{{ episode.notesShort }}</p>
-            <a href="/episodes#{{ episode.number }}">Read more...</a>
+            <a href="/episodes#{{ episode.utcId }}">Read more...</a>
           </div>
         </div>
       {% endfor %}
     </div>
 
     <div class="col-sm-12 col-md-4">
+      <h2>Blog</h2>
+      {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}      
       {% for post in site.posts limit:3 %}
       <div class="card">
         <div class="card-body">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <time datetime="{{ post.date }}">{{ post.date | date: date_format }}</time>
           <p>{{ post.excerpt }}</p>
           <a href="{{ post.url | relative_url }}">Read more...</a>
         </div>
@@ -82,6 +87,7 @@
 
   <div class="row row-home">
     <div class="col-sm-12 col-md-8 offset-md-2">
+      <h2>About</h2>
       <div class="card">
         <div class="card-body">
           <p>{{ site.long_description }}</p>

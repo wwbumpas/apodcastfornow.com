@@ -12,7 +12,8 @@ order: 1
 <div class="row">
   <div class="col col-collection-title" id="anchor{{episodes.number}}">
     <h1>{{ episodes.title }}</h1>
-    <p>{{ episodes.date }}</p>
+    {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+    <p><time datetime="{{ episodes.date }}">{{ episodes.date | date: date_format }}</time></p>
     <hr>
   </div>
 </div>

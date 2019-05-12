@@ -33,6 +33,6 @@ Date:<br>
 </div>
 
 <br>
-*Using your browser, print as PDF, [then electronically sign](https://www.howtogeek.com/164668/how-to-electronically-sign-documents-without-printing-and-scanning-them/), and remit to [apodcastfornow@gmail.com](mailto:apodcastfornow@gmail.com)*.<br>
+*Using your browser, print as PDF, [then electronically sign](https://www.howtogeek.com/164668/how-to-electronically-sign-documents-without-printing-and-scanning-them/), and remit to apodcastfornow at dot gmail com*.<br>
 <br>
-*Alternatively, print on a reconstituted carbon-based life-form ("hardcopy") and sign. If we are meeting IRL a hardcopy will be provided.*
+*Alternatively, print on a reconstituted carbon-based life-form ("hardcopy"), sign, photograph, and remit. If we are meeting IRL a hardcopy will be provided.*

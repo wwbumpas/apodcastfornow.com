@@ -98,26 +98,30 @@ if ($('.tagline').length) {
 }
 
 if ($('.container-fluid').length && !$('.container-fluid-home').length ) {
-  $('.navbar').addClass('navBackgroundVisible');
+  $('.navbar').addClass('nav-background-visible');
 }
 
 $(window).scroll(function() {
   if ($('.container-fluid-home').length) {
     if ($(window).scrollTop() > 10) {
-      $('.navbar').addClass('navBackgroundVisible');
+      $('.navbar').addClass('nav-background-visible');
     } else {
-      $('.navbar').removeClass('navBackgroundVisible');
+      $('.navbar').removeClass('nav-background-visible');
     }
   }
 });
 
 $('.button-mobile').on('click', function() {
   if ($('.navbar-collapse').hasClass('show')) {
-    $('.navbar').removeClass('navToggleBackgroundVisible');
+    $('.navbar').removeClass('nav-toggle-background-visible');
   } else {
-    $('.navbar').addClass('navToggleBackgroundVisible');
+    $('.navbar').addClass('nav-toggle-background-visible');
   }
 });
+
+if ($('.container-fluid-home').length ) {
+  $('.listen-now').addClass('listen-now-visible');
+}
 
 $('.listen-now').click(function() {
   $('html, body').animate({

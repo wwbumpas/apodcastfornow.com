@@ -9,7 +9,8 @@ layout: default
         <div class="col">
           <header>
             <h1 itemprop="name headline">{{ page.title }}</h1>
-            <p>{{ page.date }} by {{ page.author }}</p>
+            {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+            <p><time datetime="{{ page.date }}">{{ page.date | date: date_format }}</time> by {{ page.author }}</p>
             <hr>
           </header>
         </div>

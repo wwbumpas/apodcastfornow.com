@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 'UTC: A Podcast For Now'
+title: 'A Shard of the Origin Story'
 date: 2019-04-21
 author: Tyler Etters
 ---
 
-*This post has an audio mirror in UTC001.*
+This post has an audio mirror in ["To Realize a Commoner Earth"](/episodes#utc001).
 
 Back in 2010 or so, a friend sent me a link to the double helix of audio and text that is [Adam Harper's Hauntology post](http://rougesfoam.blogspot.com/2009/10/hauntology-past-inside-present.html). It remains perhaps the single most influencial hyperlink ever sent my way. It changed my life in three ways.
 
@@ -17,7 +17,7 @@ Finally, the post introduced me to [Mark Fisher](https://k-punk.org/). If you kn
 
 So, in the spirit of community, of not giving up, of optimism, and of curiousity: Coordinated Universal Time is a podcast created by myself and several other artists, writers, musicians, researchers, and similar internet folk.
 
-I'm presently armed with a field recorder on the shore of the Fox River in northern Illinois. Our intial idea was charged: what would a podcast sound like if it were scored by the Radiophonic Workshop, produced by Mark Fisher, directed by David Lynch, mixed by Wintermute, and hosted by the monolith from 2001: A Space Odyssey? What type of ideas might emerge if we invited people from all different places (and times) of the world to participate? What new ideas could we expose each other to through this medium? What if it was part sonic collage, part hauntological lunar punk zine, part DJ mix fever dream, part academic forum, part vox populi, part wierd fungus glowing in the moonlight? What if we opened up a Patreon and donated to a rotating cast of non-profit organizations? Is it possible to sculpt such a podcast with a full-wholehearted acceptance of all pretentiousness? Can we gleefully poke fun at ourselves? Can we perhaps even create something beautiful? An on demand, liminal non-space you can access everywhere? Welp. let's find out. If you have any feedback or ideas please @ us. There's also a whole bunch of the usual platforms we're on. It is `apodcastfornow` everywhere.
+I'm presently armed with a field recorder on the shore of the Fox River in northern Illinois. Our intial idea was charged: what would a podcast sound like if it were scored by the Radiophonic Workshop, produced by Mark Fisher, directed by David Lynch, mixed by Wintermute, and hosted by the monolith from 2001: A Space Odyssey? What type of ideas might emerge if we invited people from all different places (and times) of the world to participate? What new ideas could we expose each other to through this medium? What if it was part sonic collage, part hauntological lunar punk zine, part DJ mix fever dream, part academic forum, part vox populi, part wierd fungus glowing in the moonlight? Is it possible to sculpt such a podcast with a full-wholehearted acceptance of all pretentiousness? Can we gleefully poke fun at ourselves? Can we perhaps even create something beautiful? An on demand, liminal non-space you can access everywhere? Welp. let's find out. If you have any feedback or ideas please @ us. There's also a whole bunch of the usual platforms we're on. It is `apodcastfornow` everywhere.
 
 I'll close with a reading [from Wikipedia](https://en.wikipedia.org/wiki/Coordinated_Universal_Time#Etymology): The official abbreviation for Coordinated Universal Time is UTC. This abbreviation arose from a desire by the International Telecommunication Union and the International Astronomical Union to use the same abbreviation in all languages. English speakers originally proposed CUT (for "coordinated universal time"), while French speakers proposed TUC (for "temps universel coordonné"). The compromise that emerged was UTC, which conforms to the pattern for the abbreviations of the variants of Universal Time (UT0, UT1, UT2, UT1R, etc.).
 
