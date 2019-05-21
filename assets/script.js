@@ -55,31 +55,29 @@ class TextScramble {
     return this.chars[Math.floor(Math.random() * this.chars.length)]
   }
 }
-
+  
 const phrases = [
   'Now',
   '2019',
-  'Lunarpunks',
-  'Hauntologists',
-  'Now',
-  'Artists',
-  '浮世',
-  'AI',
-  'Sonderers',
-  'Climates',
-  '02219',
-  'Internet Citizens',
-  'Solastalgia',
-  'Now',
-  'Anthropocenes',
-  'Makers',
-  'Solarpunks',
+  'Alienation',
+  'the Possible',
+  'Change',
   '⁂',
-  'Now',  
-  'The Hopeful',
-  'Ellipsism',
-  'Exulansis',
-  '&#19932;'
+  'አሁን',
+  'Now',
+  '2219',
+  'Cyborgs',
+  'Lost Futures',
+  'the Anthropocene',
+  '&#19932;',
+  '现在',
+  'Now',
+  '20019',
+  'the Open Sea',
+  'Exit',
+  'the Impatient',
+  '&#10178;',
+  'τώρα'
 ]
 
 if ($('.tagline').length) {
